@@ -1,0 +1,44 @@
+{
+  "name": "claude-sessions-button",
+  "displayName": "Claude Sessions Button",
+  "description": "Adds an editor title bar button that opens the Claude Code sessions list instead of starting a new session",
+  "version": "1.0.0",
+  "publisher": "tohuw",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tohuw/claude-sessions-button"
+  },
+  "bugs": {
+    "url": "https://github.com/tohuw/claude-sessions-button/issues"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Other"],
+  "keywords": ["claude", "claude-code", "sessions", "zen-mode"],
+  "extensionDependencies": ["anthropic.claude-code"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "claude-sessions-button.openSessions",
+        "title": "Claude Code: Open Sessions",
+        "icon": {
+          "light": "resources/claude-logo.svg",
+          "dark": "resources/claude-logo.svg"
+        }
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "claude-sessions-button.openSessions",
+          "when": "!config.claudeCode.useTerminal",
+          "group": "navigation"
+        }
+      ]
+    }
+  }
+}
