@@ -27,8 +27,8 @@
         "command": "claude-sessions-button.openSessions",
         "title": "Claude Code: Open Sessions",
         "icon": {
-          "light": "resources/claude-logo.svg",
-          "dark": "resources/claude-logo.svg"
+          "light": "resources/button-icon-light.svg",
+          "dark": "resources/button-icon-dark.svg"
         }
       }
     ],
@@ -40,6 +40,20 @@
           "group": "navigation"
         }
       ]
-    }
+    },
+    "keybindings": [
+      {
+        "command": "workbench.action.toggleSidebarVisibility",
+        "key": "ctrl+shift+c",
+        "mac": "ctrl+shift+c",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.extension.claude-sessions-sidebar'"
+      },
+      {
+        "command": "claudeVSCodeSessionsList.focus",
+        "key": "ctrl+shift+c",
+        "mac": "ctrl+shift+c",
+        "when": "!sideBarVisible || activeViewlet != 'workbench.view.extension.claude-sessions-sidebar'"
+      }
+    ]
   }
 }

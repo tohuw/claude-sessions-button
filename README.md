@@ -33,6 +33,10 @@ After installing, you'll see **two** Claude icons in the editor title bar — th
 
 The remaining button will open your sessions list.
 
+## Keybinding
+
+The extension registers `Ctrl+Shift+C` to toggle the sessions sidebar. You can rebind it in your keybindings.json — search for `claude-sessions-button`.
+
 ## Requirements
 
 - [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code) VS Code extension
